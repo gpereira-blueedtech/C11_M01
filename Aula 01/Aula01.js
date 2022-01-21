@@ -52,7 +52,7 @@ console.log(typeof(boolean));
 
 
 
-/*
+
 let nome = prompt('Qual é o seu nome? ');
 console.log('Olá',nome);
 
@@ -71,6 +71,6 @@ let resultado = num1 / num2
 // Transformando o número num inteiro com parseInt
 let resultadoInt = parseInt(resultado);
 console.log('Resultado em número inteiro:',resultadoInt);
-*/
+
 
 console.log();

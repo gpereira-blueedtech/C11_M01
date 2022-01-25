@@ -75,7 +75,7 @@ console.log(nomes2[0][2].indexOf('Filmes'));
 
 
 
-
+/*
 // Funções de manipulação de arrays
 
 let nomes3 = [
@@ -104,3 +104,41 @@ while (continuar == 's'){
 console.log(nomes3);
 
 console.log();
+*/
+
+
+// Exercícios
+
+// Faça um Programa que leia 20 números inteiros
+// e armazene-os num array. 
+// Armazene os números pares no array PAR 
+// e os números IMPARES no array IMPAR. 
+// Imprima os três arrays.
+
+let num;
+let todos = [];
+let pares = [];
+let impares = [];
+let contador = 1;
+
+while (contador <= 20){
+    num = +prompt(`Digite o ${contador}º número: `);
+    todos.push(num);
+    if (num % 2 == 0){
+        pares.push(num)
+    } else {
+        impares.push(num)
+    }
+    contador++    
+}
+console.log();
+console.log('Todos os números: ');
+console.log(todos);
+
+console.log();
+console.log('Pares: ');
+console.log(pares);
+
+console.log();
+console.log('Impares');
+console.log(impares);

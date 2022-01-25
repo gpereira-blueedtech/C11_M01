@@ -2,28 +2,19 @@ console.clear();
 console.log();
 const prompt = require("prompt-sync")();
 
-
-let alunoNovo = prompt('Digite o nome do(a) aluno(a) novo(a): ')
-
+/*
 let nomes = [
                'Gabriel Lima Pereira', 
                'Danilo Diniz',
                'Eduardo Santos',
                'Leticia Pereira',
                'Iulia Mitch',
-               alunoNovo
             ]
 
 let idades = [18, 20, 21, 19, 16]
 
-let indice = 0;
 
-while (indice < nomes.length){
-    console.log(`O indíce ${indice} contém o valor ${nomes[indice]}`)
-    indice++
-}
 
-/*
 console.log(nomes);
 console.log(idades);
 
@@ -49,6 +40,17 @@ console.log(nomes[0].length);
 // Salvando um elemento da array em outra variável
 let nome_retirado = nomes[2];
 console.log(nome_retirado);
+
+
+// Forma de percorrer uma array com while
+// Não é a forma mais indicada, mas enquanto não aprendemos for, quebra nosso galho.
+let indice = 0;
+
+while (indice < nomes.length){
+    console.log(`O indíce ${indice} contém o valor ${nomes[indice]}`)
+    indice++
+}
+
 */
 
 
@@ -71,5 +73,34 @@ console.log(nomes2[0][2].indexOf('Filmes'));
 */
 
 
+
+
+
+// Funções de manipulação de arrays
+
+let nomes3 = [
+    'Gabriel Lima Pereira', 
+    'Danilo Diniz',
+    'Eduardo Santos',
+    'Leticia Pereira',
+    'Iulia Mitch',
+]
+
+console.log(nomes3);
+console.log();
+
+// // .length retorna o tamanho da array
+//console.log(nomes3.length);
+
+let continuar = 's'
+
+while (continuar == 's'){
+    let novoNome = prompt('Qual o novo nome? ')
+    nomes3.push(novoNome);
+    continuar = prompt('Deseja adicionar mais um nome? ')
+}
+
+
+console.log(nomes3);
 
 console.log();

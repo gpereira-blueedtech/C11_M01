@@ -100,7 +100,6 @@ while (continuar == 's'){
     continuar = prompt('Deseja adicionar mais um nome? ')
 }
 
-
 console.log(nomes3);
 
 console.log();

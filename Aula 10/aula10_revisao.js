@@ -117,4 +117,22 @@ for (let i of lista){
 }
 */
 
+
+
+/*
+// Somando todos os valores de uma lista.
+let listanum = [13, 8, 20, 2, 16, 18, 30];
+let soma = 0;
+
+for (let i of listanum){
+    soma = soma + i
+    
+    // Mesma coisa, escrito de outra forma. 
+    // Ele adiciona o valor passado ao que já estava na variável.
+    // soma += i
+    
+}
+
+console.log(soma);
 console.log();
+*/

@@ -134,5 +134,29 @@ for (let i of listanum){
 }
 
 console.log(soma);
-console.log();
+*/
+
+
+
+// Dicas para resolução dos exercícios
+/*
+let lista = ['Gabriel','Ana','Lucas Viana'];
+let maior = '';
+
+for (let i of lista){
+    if (i.length > maior.length){
+        maior = i;
+    }
+}
+
+let menor = maior
+
+for (let i of lista){
+    if (i.length < menor.length){
+        menor = i;
+    }
+}
+
+console.log(maior);
+console.log(menor);
 */

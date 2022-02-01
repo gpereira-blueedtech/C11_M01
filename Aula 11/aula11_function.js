@@ -136,7 +136,9 @@ let num1 = +prompt('Digite o 1º número: ');
 let num2 = +prompt('Digite o 2º número: ');
 let sinal = prompt('Digite qual operação deseja: ');
 
-let res = supercalculadora(num1,num2,sinal);
+// A variável res vai receber o valor retornado da função pelo return.
+let res = calculadora(num1,num2,sinal);
+// let res = supercalculadora(num1,num2,sinal);
 
 console.log(res)
 

@@ -13,6 +13,9 @@ for (let i in pessoa){
 }
 */
 
+
+
+/*
 // Um objeto é definido por { }
 // Cada propriedade é formada por 2 informações -> chave: valor.
 
@@ -20,15 +23,19 @@ let pessoa = { nome:'Gabriel', idade:20, cidade:'Londrina' };
 
 console.log(`O nome é ${pessoa.nome} e a idade é ${pessoa.idade}`);
 
+
+//Alterando uma propriedade de um objeto
 pessoa.idade = 21;
 
 console.log(`O nome é ${pessoa.nome} e a idade é ${pessoa.idade}`);
 
+
+//Adicionando uma nova propriedade ao objeto
 pessoa.empresa = 'Blue;'
 
 pessoa.interesses = ['Programação', 'Jogos', 'Música', 'Livros', 'Filmes']
 
-console.log(pessoa)
+console.log(pessoa);
 
 console.log();
 // consigo percorrer com for porque não estou iterando sobre o objeto!!!
@@ -36,6 +43,17 @@ console.log();
 for (let i of pessoa.interesses){
     console.log(i);
 }
+
+console.log();
+
+// Apagando uma propriedade de um objeto
+delete pessoa.interesses;
+
+console.log(pessoa);
+*/
+
+
+
 
 /*
 // Um array de objetos!!!!
@@ -79,18 +97,105 @@ if(noticia_atual.importancia == 1){
 
 
 
-// Exercícios
+
+// Métodos!
+
+const pessoa = {
+    nome: 'Gabriel',
+    idade: 20,
+    cidade: 'Londrina',
+    empresa: 'Blue',
+    interesses: ['Programação', 'Jogos', 'Música', 'Livros', 'Filmes'],
+
+    bio: function(){
+        console.log(`A pessoa ${this.nome} trabalha na empresa: ${this.empresa}`)
+    },
+
+    mudaEmpresa: function(){
+        let novaempresa = prompt('Qual a nova empresa? ');
+        this.empresa = novaempresa
+    },
+
+    getnome: function(){
+        return this.nome;
+    },
+
+    setnome: function(nome){
+        this.nome = nome
+    }
+};
+
+// pessoa.bio()
+// pessoa.mudaEmpresa();
+
+// pessoa.bio()
+
+console.log(pessoa.getnome());
+
+let nome = prompt('Qual o novo nome? ')
+pessoa.setnome(nome);
+console.log(pessoa.getnome());
+
 /*
-Crie um sistema de cadastro de funcionários que deve criar um objeto novo 
-para cada funcionário cadastrado com as informações: nome, cargo e salário. 
-Ele deve armazenar todos esses objetos em uma lista. 
-Ao final de cada cadastro ele deve perguntar se deseja cadastrar um novo funcionário 
-e recomeçar o processo,
+// Exercícios
 
-2ª parte:
-e caso não haja mais funcionários para cadastrar, 
-ele deve chamar uma função que deve apresentar a quantidade de funcionários 
-com cada cargo e os nomes deles. (Você pode limitar as opções de cargo para facilitar.)
+// Crie um sistema de cadastro de funcionários que deve criar um objeto novo 
+// para cada funcionário cadastrado com as informações: nome, cargo e salário. 
+// Ele deve armazenar todos esses objetos em uma lista. 
+// Ao final de cada cadastro ele deve perguntar se deseja cadastrar um novo funcionário 
+// e recomeçar o processo,
+
+// e caso não haja mais funcionários para cadastrar, 
+// ele deve chamar uma função que deve apresentar a quantidade de funcionários 
+// com cada cargo e os nomes deles. (Você pode limitar as opções de cargo para facilitar.)
+
+
+
+function contaFuncionarios(lista){
+    let professores = [];
+    let alunos = [];
+    let qtprofessores = 0;
+    let qtalunos = 0;
+    
+    for (let i of lista){
+        if (i.cargo == 'professor'){
+            qtprofessores++
+            professores.push(i.nome)
+        } else if (i.cargo == 'aluno'){
+            qtalunos++
+            alunos.push(i.nome)
+        }
+    }
+
+    console.log('Quantidade de professores: ',qtprofessores);
+    console.log('Quantidade de alunos: ',qtalunos);
+    console.log();
+    console.log('Professores:');
+    for (let i of professores){
+        console.log(i)
+    }
+    console.log();
+    console.log('Alunos:')
+    for (let i of alunos){
+        console.log(i)
+    }
+}
+
+let continuar = 's';
+let listaDeFuncionarios = [];
+
+while (continuar == 's'){
+    let funcionario = {};
+
+    funcionario.nome = prompt('Qual o nome? ');
+    funcionario.cargo = prompt('Qual o cargo? ');
+    funcionario.salario = +prompt('Qual o salário? ');
+
+    listaDeFuncionarios.push(funcionario);
+
+    continuar = prompt('Deseja cadastrar mais? ')
+}
+
+contaFuncionarios(listaDeFuncionarios)
+
 */
-
-{nome: ,cargo: ,salario:}
